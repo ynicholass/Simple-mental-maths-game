@@ -1,0 +1,30 @@
+# Simple mental maths game made by Nicholas
+
+import random
+
+name = input("Hello there, what is your name? ")
+print(name + ", would you like to play a game of mental maths?")
+
+ans = input("'y' or 'n': ")
+if ans=="y":
+  print()
+  print("Great " + name + ".")
+  print()
+  num1 = random.randint(1,100)
+  num2 = random.randint(1,100)
+  answer = str(num1 + num2)
+  theirans = input("What is " + str(num1) + " plus " + str(num2) + "? (Enter a number) ")
+  if theirans==answer:
+    print("Congrats, you are smarter than a 9 year old.")
+  elif theirans!=answer and theirans.isdigit():
+    print("Bruh you surprisingly need help with addition")
+  else:
+    print("Bruh you didn't follow instructions. I told you to write a number.")
+elif ans=="n":
+  print()
+  print("Ok bye then.")
+else:
+  print()
+  print("U didn't follow instructions. I told u to write 'y' or 'n'.")
+print()
+print("Have fun with your life. Nice meeting you " + name + ".")
